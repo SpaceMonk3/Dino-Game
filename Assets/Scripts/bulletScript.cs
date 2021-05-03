@@ -4,30 +4,35 @@ using UnityEngine;
 
 public class bulletScript : MonoBehaviour
 {
-    public float bulletSpeed = 10.0f; 
+    public Vector3 scrollSpeed = new Vector3(0.5f, 0.0f, 0.0f);
+    public Canvas PauseScreen;
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.right * bulletSpeed;
+        //PauseScreen = GetComponent<Canvas>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GetComponent<Transform>().position -= scrollSpeed * Time.deltaTime;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (collision.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            Debug.Log("bullet hit Dino");
+            Time.timeScale = 0;
+
         }
-        else //if(collision.gameObject.tag != "Obstacle")
+
+        if (col.gameObject.tag != "Player" && col.gameObject.tag != "Ground")
         {
+
             Destroy(gameObject);
             Debug.Log("bullet destroy");
+
         }
     } 
 }

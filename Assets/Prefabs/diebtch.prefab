@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3851274249366166855}
   - component: {fileID: -4352959641358551386}
   - component: {fileID: -87100464011703301}
-  - component: {fileID: 2142600831729511897}
+  - component: {fileID: 8171504174265255001}
   m_Layer: 0
   m_Name: diebtch
   m_TagString: Untagged
@@ -131,16 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9429812, y: 0.7407155}
   m_EdgeRadius: 0
---- !u!114 &2142600831729511897
+--- !u!114 &8171504174265255001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7476792566918623040}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9efc5e6ed92756498ee757b78556cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: -70
+  scrollSpeed: {x: 27.7, y: 0, z: 0}

@@ -8,14 +8,15 @@ public class ObjectSpawner : MonoBehaviour
     private int ranIndex;
     private float timeCounter;
     public GameObject[] prefabs;
-    public Transform spawnPoint;
+    public Transform cactiSpawn;
+    public Transform birdSpawn;
     // Start is called before the first frame update
     void Start()
     {
   
         ranSec = Random.Range(1.0f, 4.0f);
         timeCounter = 0.0f;
-        ranIndex = 0;//Random.Range(0, 1);
+        ranIndex = Random.Range(0, 2);
 
         Debug.Log("prefabs array size at start = " + prefabs.Length);
         Debug.Log("random second at start = " + ranSec);
@@ -33,11 +34,22 @@ public class ObjectSpawner : MonoBehaviour
             Debug.Log("prefabs array size = " + prefabs.Length);
             Debug.Log("Random Index = " + ranIndex);
             
-            Instantiate(prefabs[ranIndex], spawnPoint.position, Quaternion.identity);
-            ranSec = Random.Range(0.0f, 2.0f);
+            if (ranIndex == 0)
+            {
+                Instantiate(prefabs[ranIndex], cactiSpawn.position, Quaternion.identity);
+                ranSec = Random.Range(0.0f, 2.0f);
+            }
+            else
+            {
+                Debug.Log("Entered bullet area");
+                Instantiate(prefabs[ranIndex], birdSpawn.position, Quaternion.identity);
+                ranSec = Random.Range(0.0f, 2.0f);
+            }
+            
+            
             // write code so there is atleast .5 sec of gap btwn each instantiating
             Debug.Log("random second = " + ranSec);
-            //ranIndex = Random.Range(0, 1);
+            ranIndex = Random.Range(0, 2);
         }
     }
 }
