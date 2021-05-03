@@ -19,8 +19,13 @@ public class turrentScript : MonoBehaviour
         GetComponent<Transform>().position -= scrollSpeed * Time.deltaTime;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
+        if (col.gameObject.tag == "Player")
+        {
+            Time.timeScale = 0;
+        }
+
         if (col.gameObject.tag != "Player" && col.gameObject.tag != "Ground")
         {
 

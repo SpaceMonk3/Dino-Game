@@ -25,6 +25,7 @@ public class DinoMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         
+        // Playing particle animation
         if (col.gameObject.tag == "Ground")
         {
             colDetect = true;
@@ -38,7 +39,7 @@ public class DinoMovement : MonoBehaviour
     void Update()
     {
 
-        
+        // keyboard controls (up and down arrow)
         if (Input.GetKey(KeyCode.UpArrow) && colDetect)
         {
             anime.SetBool("IsOnGround",false);
