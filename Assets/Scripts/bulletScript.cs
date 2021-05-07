@@ -5,8 +5,7 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
     public Vector3 scrollSpeed = new Vector3(0.5f, 0.0f, 0.0f);
-    public Canvas PauseScreen;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +20,7 @@ public class bulletScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player")
-        {
-            Time.timeScale = 0;
-
-        }
-
+        
         if (col.gameObject.tag != "Player" && col.gameObject.tag != "Ground")
         {
 

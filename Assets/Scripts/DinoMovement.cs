@@ -16,6 +16,9 @@ public class DinoMovement : MonoBehaviour
     ParticleSystem particleHolder;
     public Transform shootpoint;
     public GameObject bullet;
+    public GameObject menu;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,6 +36,12 @@ public class DinoMovement : MonoBehaviour
             particleHolder = Instantiate(particle, landing.transform.position, landing.transform.rotation);
             particleHolder.Play();
             Debug.Log("Collision detected");
+        }
+
+        if (col.gameObject.tag == "Obstacle")
+        {
+            Time.timeScale = 0;
+            menu.SetActive(true);
         }
 
     }
