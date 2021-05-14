@@ -7,6 +7,7 @@ public class ObjectSpawner : MonoBehaviour
     private float ranSec; 
     private int ranIndex;
     private float timeCounter;
+    
     public GameObject[] prefabs;
     public Transform cactiSpawn;
     public Transform birdSpawn;
