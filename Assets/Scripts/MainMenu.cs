@@ -37,4 +37,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("QUIT!!!!!");
         Application.Quit();
     }
+
+    public void resetHighScore()
+    {
+        PlayerPrefs.DeleteKey("HighScore"); //deleting the stored highscore key-pair on the system
+    }
 }

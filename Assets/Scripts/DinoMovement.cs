@@ -13,6 +13,7 @@ public class DinoMovement : MonoBehaviour
     public Transform shootpoint;
     public GameObject bullet;
     public GameObject menu;
+    public bool gameOver = false;
 
     //private variables
     ParticleSystem particleHolder;
@@ -44,6 +45,7 @@ public class DinoMovement : MonoBehaviour
         {
             Time.timeScale = 0;
             menu.SetActive(true);
+            gameOver = true;
         }
 
     }
