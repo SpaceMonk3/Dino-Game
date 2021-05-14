@@ -37,14 +37,15 @@ public class ObjectSpawner : MonoBehaviour
             
             if (ranIndex == 0)
             {
+                Debug.Log("Cacti spawn");
                 Instantiate(prefabs[ranIndex], cactiSpawn.position, Quaternion.identity);
-                ranSec = Random.Range(0.0f, 2.0f);
+                ranSec = Random.Range(0.5f, 1.65f);
             }
             else
             {
-                Debug.Log("Entered bullet area");
+                Debug.Log("Pterodactyl spawn");
                 Instantiate(prefabs[ranIndex], birdSpawn.position, Quaternion.identity);
-                ranSec = Random.Range(0.0f, 2.0f);
+                ranSec = Random.Range(0.5f, 1.65f);
             }
             
             

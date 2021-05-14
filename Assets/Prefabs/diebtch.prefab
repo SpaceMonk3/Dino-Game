@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9efc5e6ed92756498ee757b78556cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: {x: 27.7, y: 0, z: 0}
+  scrollSpeed: {x: 25, y: 0, z: 0}
