@@ -4,8 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - prefabs: {instanceID: 0}
-  - spawnPoint: {fileID: 6911808335534046685, guid: 2d491bba3e0949d4cbd78f4b8cc9f491,
+  - cactiSpawn: {fileID: 5081839619557251856, guid: aa417267a499a984d8eed62e2d3beec6,
+      type: 3}
+  - birdSpawn: {fileID: 1461902679232629614, guid: 865fa1b7bf3c0224691e001f784078ef,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

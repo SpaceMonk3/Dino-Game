@@ -10,14 +10,15 @@ public class DinoMovement : MonoBehaviour
     public GameObject landing;
     public Animator anime;
     public Vector2 duckCollider;
-    BoxCollider2D col;
-    Rigidbody2D rb;
-    bool colDetect = false;
-    ParticleSystem particleHolder;
     public Transform shootpoint;
     public GameObject bullet;
     public GameObject menu;
 
+    //private variables
+    ParticleSystem particleHolder;
+    bool colDetect = false;
+    BoxCollider2D col;
+    Rigidbody2D rb;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class DinoMovement : MonoBehaviour
             Debug.Log("Collision detected");
         }
 
+        //pausing game when Dino hits an obstacle (gameover)
         if (col.gameObject.tag == "Obstacle")
         {
             Time.timeScale = 0;

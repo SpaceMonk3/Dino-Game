@@ -6,8 +6,16 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    
-    // Start is called before the first frame update
+    public void start()
+    {
+        SceneManager.LoadScene("MainScene");
+        Time.timeScale = 1;
+    }
+
+    public void mainMenu() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
     public void pause()
     {
         Time.timeScale = 0;
@@ -20,7 +28,7 @@ public class MainMenu : MonoBehaviour
 
     public void replay()
     {
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene("MainScene");
         Time.timeScale = 1;
     }
 
