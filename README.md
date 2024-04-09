@@ -1,2 +1,2 @@
 # Dino-Game
-Simple clone of the Chrome "T-rex run" browser game
+Chrome "T-rex run" browser game clone in Unity Game Engine and C#
